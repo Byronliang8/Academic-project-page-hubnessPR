@@ -43,6 +43,8 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 </head>
 <body>
 
@@ -172,47 +174,116 @@ and space          </p>
 </section>
 <!-- End paper abstract -->
 
-
-<!-- Image carousel -->
-<!--<section class="hero is-small">-->
-<!--  <div class="hero-body">-->
-<!--    <div class="container">-->
-<!--&lt;!&ndash;      <div id="results-carousel" class="carousel results-carousel">&ndash;&gt;-->
-<!--&lt;!&ndash;       <div class="item">&ndash;&gt;-->
-<!--        &lt;!&ndash; Your image here &ndash;&gt;-->
-<!--        <img src="static/images/33287_TSanalysis.png" alt="MY ALT TEXT"/>-->
-<!--        <h2 class="subtitle has-text-centered">-->
-<!--          Computational Complexity Analysis on FFHQ.-->
-<!--        </h2>-->
+<!--  &lt;!&ndash; Preliminaries &ndash;&gt;-->
+<!--<section class="section hero is-light">-->
+<!--  <div class="container is-max-desktop">-->
+<!--    <div class="columns is-centered has-text-centered">-->
+<!--      <div class="column is-four-fifths">-->
+<!--        <h2 class="title is-3">Preliminaries</h2>-->
+<!--        <img src="static/images/ICML2024/Slide3.jpg" alt="MY ALT TEXT"/>-->
+<!--        <br />-->
+<!--        <br />-->
+<!--        <br />-->
+<!--        <h2 class="title is-3">Redundancies in Precision and Recall (P&R)</h2>-->
+<!--        <img src="static/images/ICML2024/Slide4.jpg" alt="MY ALT TEXT"/>-->
 <!--      </div>-->
-<!--      <div class="item">-->
-<!--        &lt;!&ndash; Your image here &ndash;&gt;-->
-<!--        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>-->
-<!--        <h2 class="subtitle has-text-centered">-->
-<!--          Second image description.-->
-<!--        </h2>-->
-<!--      </div>-->
-<!--      <div class="item">-->
-<!--        &lt;!&ndash; Your image here &ndash;&gt;-->
-<!--        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>-->
-<!--        <h2 class="subtitle has-text-centered">-->
-<!--         Third image description.-->
-<!--       </h2>-->
-<!--     </div>-->
-<!--     <div class="item">-->
-<!--      &lt;!&ndash; Your image here &ndash;&gt;-->
-<!--      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>-->
-<!--      <h2 class="subtitle has-text-centered">-->
-<!--        Fourth image description.-->
-<!--      </h2>-->
 <!--    </div>-->
 <!--  </div>-->
-<!--</div>-->
+<!--</section>-->
+<!--&lt;!&ndash; End Preliminaries &ndash;&gt;-->
+
+<!-- Image carousel-->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+<!--         Your image here-->
+        <img src="static/images/ICML2024/Slide3.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Preliminaries: proposed by Kynkaanniemi (2019), the precision and recall (P&R) metrics for assessing generative models
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/ICML2024/Slide5.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Redundancies in Precision and Recall (P&R) by Kynkaanniemi (2019).
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/ICML2024/Slide6.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-left">Samples with similar hubness values are effective representative samples in terms of P&R ratio calculation. (a)
+Left: Histogram of sample occurrences (log scale) vs. hubness value (FFHQ). The samples are grouped into different colors
+based on similar hubness values. Right: Pie chart showing that all three groups share similar ratios of samples identified as 1
+vs. 0 (green vs. light green) using Binary funcation for recall calculation. (b) The same experiment as (a) but on StyleGAN-generated
+samples for precision calculation.
+       </h2>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/ICML2024/Slide7.jpg" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-left">Most samples φ with f (φ, Φ) = 1 (Binary funcation) are included in the k-NN hypersphere of at least one hubs sample of the other distribution. (a) Left: Histogram of sample occurrences (log scale) vs. the times a sample is included
+in the k-NN hypersphere of a sample of the other distribution, i.e., valid φ′ (FFHQ). The samples are grouped into different colors based on similar numbers of valid φ′. Right: Pie chart
+showing the ratio of samples within the k-NN hypersphere of hubness vs. non-hubness samples from the other distribution, to the total number of samples φ with f(φ, Φ) = 1 in each group. (b) The same experiment as (a) but on StyleGAN-generated samples.
+      </h2>
+    </div>
+  </div>
+</div>
 </div>
 </section>
 <!-- End image carousel -->
+<br/>
+  <br/>
+<br/>
 
+<!-- Image carousel-->
+<section class="hero is-small">
+<!--    <div class="container">-->
+<!--    <div class="columns is-left has-text-left">-->
+<!--&lt;!&ndash;      <div class="column is-four-fifths">&ndash;&gt;-->
+<!--  <h2 class="title is-left has-text-left">Analysis</h2>-->
+<!--      </div>-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--      </div>-->
 
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel2" class="carousel results-carousel">
+       <div class="item">
+         Your image here
+        <img src="static/images/ICML2024/Slide9.jpg" alt="MY ALT TEXT"/>
+<!--        <h2 class="subtitle has-text-centered">-->
+<!--          Preliminaries: proposed by Kynkaanniemi (2019), the precision and recall (P\&R) metrics for assessing generative models-->
+<!--        </h2>-->
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/ICML2024/Slide10.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-left ">
+          <p> B.L.: the original P&R metrics as the baseline; eP&R: our efficient P&R metrics; DM: Distance Matrix; A. hubs: the approximate hubness value; $m_x =\max{m_r,m_g}$ and $ |\mathbf{\Phi}_g|=m_g, |\mathbf{\Phi}_r|=m_r$.      </p>  </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/ICML2024/Slide11.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-left">Time and space consumption of our eP&R metrics V.S the original P&R metrics [1] on
+the FFHQ. Time (S): serial implementation. Time (P): parallel implementation using CUDA.
+       </h2>
+     </div>
+<!--     <div class="item">-->
+<!--      &lt;!&ndash; Your image here &ndash;&gt;-->
+<!--      <img src="static/images/ICML2024/Slide7.jpg" alt="MY ALT TEXT"/>-->
+<!--      <h2 class="subtitle has-text-centered">Most samples φ with f (φ, Φ) = 1 (Binary funcation) are included in the k-NN hypersphere of at least one hubs sample of the other distribution. (a) Left: Histogram of sample occurrences (log scale) vs. the times a sample is included-->
+<!--in the k-NN hypersphere of a sample of the other distribution, i.e., valid φ′ (FFHQ). The samples are grouped into different colors based on similar numbers of valid φ′. Right: Pie chart-->
+<!--showing the ratio of samples within the k-NN hypersphere of hubness vs. non-hubness samples from the other distribution, to the total number of samples φ with f(φ, Φ) = 1 in each group. (b) The same experiment as (a) but on StyleGAN-generated samples.-->
+<!--      </h2>-->
+<!--    </div>-->
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
 
 
 <!-- Youtube video -->
@@ -293,11 +364,20 @@ and space          </p>
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@inproceedings{liangefficient,
-  title={Efficient Precision and Recall Metrics for Assessing Generative Models using Hubness-aware Sampling},
-  author={Liang, Yuanbang and Wu, Jing and Lai, Yu-Kun and Qin, Yipeng},
-  booktitle={Forty-first International Conference on Machine Learning}
+      <pre><code>
+
+@InProceedings{pmlr-v235-liang24f,
+  title = 	 {Efficient Precision and Recall Metrics for Assessing Generative Models using Hubness-aware Sampling},
+  author =       {Liang, Yuanbang and Wu, Jing and Lai, Yu-Kun and Qin, Yipeng},
+  booktitle = 	 {Proceedings of the 41st International Conference on Machine Learning},
+  pages = 	 {29682--29699},
+  year = 	 {2024},
+  volume = 	 {235},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {21--27 Jul},
+  publisher =    {PMLR},
 }
+
 </code></pre>
     </div>
 </section>
